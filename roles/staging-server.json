@@ -1,0 +1,45 @@
+{
+  "name": "staging-server",
+  "description": "Basic role for a staging server",
+  "default_attributes": {
+    "boxy-rails": {
+      "secret_key_path": "/root/chef-solo/data_bag_key",
+      "applications": [
+        {
+          "name": "wheel",
+          "rails_env": "staging",
+          "background_workers": 1,
+          "unicorn_totalmem": 600 // Unicorn process memory limit, in MBs
+        }
+      ],
+      "deployer": "deployer",
+      "data_path": "/data",
+      "monitor_services": {
+        "nginx": true,
+        "memcached": true,
+        "postgresql": true,
+        "drives_space": true
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[chef-solo-search]",
+    "role[box]",
+    "swap",
+    "role[rails]",
+    "role[nginx]",
+    "role[pg]",
+    "role[memcached]",
+    "recipe[monit::ubuntu12fix]",
+    "recipe[boxy-rails::monit]"
+
+    //  Uncomment to use datadog monitoring on server
+    //  ,"recipe[boxy-rails::watchdog]"
+
+    //  Uncomment to use docsplit gem on server
+    //  ,"recipe[docsplit]"
+  ],
+  "chef_type": "role",
+  "override_attributes": {}
+}

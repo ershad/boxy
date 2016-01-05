@@ -1,0 +1,13 @@
+{
+  "name": "redis",
+  "description": "Redis role",
+  "default_attributes": {
+    "redis": {
+      "pid_file": "/var/run/redis/redis-server.pid"
+    }
+  },
+  "json_class": "Chef::Role",
+  "run_list": ["redis::install_from_package"],
+  "chef_type": "role",
+  "override_attributes": {}
+}

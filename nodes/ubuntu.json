@@ -1,0 +1,39 @@
+{
+  // Example of Overriding default value for nginx from web role
+  "nginx": {
+    "worker_processes": "auto"
+  },
+
+  "ruby": {
+    "version": "2.2.2"
+  },
+
+  "run_list": [
+    // This recipe is required for cookbooks that depends on data-bags search functionality.
+    "recipe[chef-solo-search]",
+
+    //Setup basic required users, tools and packages for all type of machines
+    "role[box]",
+    "role[rails]",
+    "role[nginx]",
+    "role[pg]",
+    // Uncomment if you need to use mysql instead of postgresql
+    //"role[mysql]",
+    "role[memcached]"
+  ],
+
+  // Example of rails application config, overriding default values
+  "boxy-rails": {
+    "authorized_keys": [],
+
+    "applications": [
+      {
+        "name": "bigwheel",
+        "background_workers": 1,
+        "unicorn_totalmem": 600, // Unicorn process memory limit in MB. It's used by monit.
+        "domain": "bigwheel.com"
+      }
+    ]
+
+  }
+}

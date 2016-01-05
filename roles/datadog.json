@@ -1,0 +1,6 @@
+{
+  "datadog": {
+    "api_key": "xxxx",
+    "application_key": "xxxx"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "box",
+  "description": "Sets up basic users and required tools, and configures monit default attributes",
+  "default_attributes": {
+    "monit": {
+      "logfile" : "/var/log/monit.log",
+      "poll_start_delay": false,
+      "port": "2812",
+      "notify_email": "alerts@your-company.com",
+      "mailserver": {
+        "host": "SMTP_HOST", // Example "smtp.mandrillapp.com"
+        "port": 587,
+        "username": "SMTP_USERNAME",
+        "password": "SMTP_PASSWORD"
+      },
+      "mail_format": {
+        "from": "monit@your-app-name.com"
+      },
+      "drives": {
+        "rootfs": {
+          "path": "/",
+          "space_limit": "85%"
+        }
+      }
+    },
+    "resolver": {"nameservers": ["8.8.8.8", "8.8.8.4"]},
+    "boxy-rails": {
+      "data_path": "/data",
+      "apps_path": "/data/apps",
+      "deployer": "deployer"
+    },
+    "rbenv": {
+      "install_prefix": "/data"
+    },
+    "sysctl": {
+      "params": {
+        "vm": {
+          "swappiness": 10
+        }
+      }
+    },
+    "create-swap": {
+      "swap-location": "/swapfile",
+      "swap-size": 1
+    }
+  },
+  "json_class": "Chef::Role",
+  "run_list": [
+    "boxy-rails::selinux_permissive",
+    "boxy-rails::user",
+    "sysctl",
+    "boxy-rails::lib_directory",
+    "ntp",
+    "boxy-rails::sudoers",
+    "boxy-rails::packages",
+    "boxy-rails::ruby"
+  ],
+  "chef_type": "role",
+  "override_attributes": {}
+}

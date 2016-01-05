@@ -1,0 +1,7 @@
+{
+  "name": "sqlserver",
+  "description": "Installs native dependencies for sql server gem tiny_tds",
+  "run_list": ["boxy-rails::sqlserver"],
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}

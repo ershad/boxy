@@ -1,0 +1,21 @@
+{
+  "ruby": {
+    "version": "2.2.1"
+  },
+
+  "boxy-rails": {
+    "applications": [
+      {
+        "name": "bigwheel"
+        // Configure as needed
+        , "background_workers": 1
+      }
+    ],
+    // Add ssh keys to provide access to deployer user for allowing deployment
+    "authorized_keys": []
+  },
+
+  "run_list": [
+    "role[staging-server]"
+  ]
+}

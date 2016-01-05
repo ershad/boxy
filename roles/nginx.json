@@ -1,0 +1,27 @@
+{
+  "name": "nginx",
+  "description": "Sets up nginx",
+  "default_attributes": {
+    "nginx": {
+      "default_site_enabled": false,
+      "worker_processes": 3,
+      "user": "deployer",
+      "group": "deployer",
+      "client_max_body_size": "250M"
+    },
+    "boxy-rails": {
+      "deployer": "deployer",
+      "data_path": "/data",
+      "monitor_services": {
+        "nginx": true
+      }
+    }
+  },
+  "json_class": "Chef::Role",
+  "run_list": [
+    "nginx",
+    "boxy-rails::nginx_applications"
+  ],
+  "chef_type": "role",
+  "override_attributes": {}
+}

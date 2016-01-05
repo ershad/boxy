@@ -1,0 +1,15 @@
+{
+  "id": "watchdog",
+  "api_key": {
+    "encrypted_data": "0wWLNATSggT6m6LIv8B/pNG3wYt0eIvTNEBn+xOSM4L3ELNcKi6CkEg5WdWO\nlIWmDrsmIbW/FewnBYqSL4IvMg==\n",
+    "iv": "MC0Sxf6+eyJ64n3EkZ9XSQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "app_key": {
+    "encrypted_data": "qWKVf71de5RuSURpgRlj6zKa5dgiSVnkXiHIuGaaNYXHt0g01O3kUubnbQPl\nbNVmo0tyDpyz/+xFoRnfwUfD3A==\n",
+    "iv": "Ik/Db6yCyYJ14QNi3k9obw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

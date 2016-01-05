@@ -1,0 +1,16 @@
+{
+  "name": "memcached",
+  "description": "Sets up memcached",
+  "default_attributes": {
+    "boxy-rails": {
+      "monitor_services": {
+        "memcached": true
+      }
+    }
+  },
+
+  "json_class": "Chef::Role",
+  "run_list": ["memcached"],
+  "chef_type": "role",
+  "override_attributes": { }
+}

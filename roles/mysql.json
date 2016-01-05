@@ -1,0 +1,17 @@
+{
+  "name": "mysql",
+  "description": "Sets up Mysql database",
+  "default_attributes": {
+    "mysql": {
+      "server_root_password": "changeme",
+      "server_deployer_password": ""
+    }
+  },
+
+  "json_class": "Chef::Role",
+  "run_list": ["boxy-rails::mysql"],
+
+  "chef_type": "role",
+  "override_attributes": {
+  }
+}

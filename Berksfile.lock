@@ -1,0 +1,206 @@
+DEPENDENCIES
+  apt
+  boxy-rails
+    git: git://github.com/bigbinary/boxy-rails.git
+    revision: f5b01636f404511095e79f8503b63ea35805f0c8
+  build-essential
+  chef-solo-search
+  chef_handler
+  datadog
+  delayed_job
+    git: git://github.com/bigbinary/boxy-delayed-job.git
+    revision: a8c5ed4a41ad8c19ea020601a1901cbb4a641356
+  docsplit
+    git: git://github.com/bigbinary/docslipt-chef.git
+    revision: 0a8ceb05da8eafe602c7525d26f37054494e1e11
+  git
+  imagemagick
+  locale
+    git: git://github.com/bigbinary/locale.git
+    revision: df30fa85dd9d5e51c0ea04a0bf72fd22f6560616
+  logrotate
+  memcached
+  monit
+  mysql
+  newrelic
+  nginx
+  nodejs (~> 2.4.0)
+  ntp
+  ohai
+  openssl
+  papertrail-rsyslog
+    git: git://github.com/widgit-cookbooks/papertrail-rsyslog.git
+    revision: ab70d97dc16c9a8c3c1554b311a8737a69d942e0
+  postfix
+  postgresql
+    git: git://github.com/bigbinary/postgresql.git
+    revision: 4d3717f34057b3129ed9c1b78501ff60b194f1f2
+  python
+  rbenv
+  redis (~> 3.0.4)
+  rsyslog
+  runit
+  s3cmd
+  selinux
+  ssl
+    git: git://github.com/cap10morgan/ssl-cookbook.git
+    revision: eddc024895e4cdbb77dae18f919c93f29f1aeec9
+  sudo
+  swap
+    git: git://github.com/att-cloud/cookbook-swap.git
+    revision: 41f145958c3facbd75b35eed0dc650bdc0cb9ab9
+  sysctl
+  timezone
+  tomcat
+  unicorn
+    git: git://github.com/bigbinary/boxy-unicorn.git
+    revision: ef8dce600b266a0b712fb0a9ca26668a32a342c0
+  user
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.7.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  boxy-rails (0.1.10)
+    apt (>= 0.0.0)
+    database (~> 4.0.3)
+    datadog (>= 0.0.0)
+    delayed_job (>= 0.0.0)
+    imagemagick (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    memcached (>= 0.0.0)
+    monit (>= 0.0.0)
+    mysql (~> 6.0)
+    mysql2_chef_gem (>= 0.0.0)
+    nginx (>= 0.0.0)
+    nodejs (>= 0.0.0)
+    postfix (>= 0.0.0)
+    postgresql (>= 0.0.0)
+    rbenv (>= 0.0.0)
+    redis (>= 0.0.0)
+    selinux (>= 0.0.0)
+    sudo (>= 0.0.0)
+    unicorn (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  build-essential (2.2.3)
+  chef-solo-search (0.5.1)
+  chef-sugar (3.1.0)
+  chef_handler (1.1.9)
+  curl (2.0.1)
+  database (4.0.6)
+    postgresql (>= 1.0.0)
+  datadog (2.1.0)
+    apt (>= 0.0.0)
+    chef_handler (~> 1.1.0)
+    yum (>= 0.0.0)
+  delayed_job (0.1.1)
+    boxy-rails (>= 0.0.0)
+    monit (>= 0.0.0)
+    rbenv (>= 0.0.0)
+  dmg (2.2.2)
+  docsplit (0.2.0)
+  git (4.2.2)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  homebrew (1.12.0)
+    build-essential (>= 2.1.2)
+  imagemagick (0.2.3)
+  install_from (3.0.4)
+  java (1.31.0)
+  locale (1.0.3)
+  logrotate (1.9.1)
+  mariadb (0.3.0)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  memcached (1.7.2)
+    runit (~> 1.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  metachef (3.0.4)
+  monit (0.7.5)
+  mysql (6.0.22)
+    smf (>= 0.0.0)
+    yum-mysql-community (>= 0.0.0)
+  mysql2_chef_gem (1.0.1)
+    build-essential (>= 0.0.0)
+    mariadb (>= 0.0.0)
+    mysql (>= 0.0.0)
+  newrelic (2.12.2)
+    apt (~> 2.0)
+    curl (>= 0.0.0)
+    python (>= 0.0.0)
+    yum (~> 3.0)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  nodejs (2.4.0)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  ntp (1.8.6)
+  ohai (2.0.1)
+  openssl (4.0.0)
+    chef-sugar (>= 0.0.0)
+  packagecloud (0.0.18)
+  papertrail-rsyslog (1.2.0)
+    rsyslog (~> 1.12.1)
+  postfix (3.6.2)
+  postgresql (3.4.21)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (~> 4.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rbac (1.0.3)
+  rbenv (1.7.1)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    ohai (>= 1.1)
+  redis (3.0.4)
+    install_from (>= 0.0.0)
+    metachef (>= 0.0.0)
+    runit (>= 0.0.0)
+  rsyslog (1.12.2)
+  runit (1.6.0)
+    packagecloud (>= 0.0.0)
+  s3cmd (0.0.1)
+  selinux (0.9.0)
+  smf (2.2.7)
+    rbac (>= 1.0.1)
+  ssl (1.1.0)
+  sudo (2.7.1)
+  swap (0.1.4)
+  sysctl (0.6.2)
+    ohai (>= 0.0.0)
+  timezone (0.0.1)
+  tomcat (0.17.3)
+    java (>= 0.0.0)
+    openssl (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  unicorn (0.1.2)
+    boxy-rails (>= 0.0.0)
+    rbenv (>= 0.0.0)
+  user (0.4.2)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)
+  yum (3.6.1)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.17)
+    yum (>= 3.0)
